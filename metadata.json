@@ -1,0 +1,6 @@
+{
+  "name": "Chow Box",
+  "description": "A modern, stylish, and premium website for Chow Box bakery, featuring freshly baked breads, pastries, cakes, desserts, special offers, and an interactive menu.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
