@@ -109,24 +109,24 @@ export default function CartDrawer({
     <div className="fixed inset-0 z-50 overflow-hidden" aria-labelledby="slide-over-title" role="dialog" aria-modal="true">
       {/* Black backdrop overlay */}
       <div
-        className="absolute inset-0 bg-bakery-chocolate/60 backdrop-blur-sm transition-opacity"
+        className="absolute inset-0 bg-[#3E2723]/60 backdrop-blur-sm transition-opacity"
         onClick={onClose}
       />
 
       <div className="absolute inset-y-0 right-0 max-w-full flex pl-10">
-        <div className="w-screen max-w-md bg-bakery-cream shadow-2xl flex flex-col h-full border-l border-bakery-clay/50 animate-in slide-in-from-right duration-300">
+        <div className="w-screen max-w-md bg-[#FDFBF7] shadow-2xl flex flex-col h-full border-l border-[#E0D5C1] animate-in slide-in-from-right duration-300">
           
           {/* Header block */}
-          <div className="px-6 py-5 bg-white border-b border-bakery-clay/30 flex justify-between items-center">
+          <div className="px-6 py-5 bg-white border-b border-[#E0D5C1]/40 flex justify-between items-center">
             <div className="flex items-center space-x-2.5">
-              <div className="w-8 h-8 rounded-lg bg-bakery-gold/15 text-bakery-chocolate flex items-center justify-center">
-                <ShoppingBag className="w-4.5 h-4.5 text-bakery-brown-dark" />
+              <div className="w-8 h-8 rounded-lg bg-[#D4AF37]/15 text-[#3E2723] flex items-center justify-center">
+                <ShoppingBag className="w-4.5 h-4.5" />
               </div>
-              <h2 className="font-serif text-lg font-bold text-bakery-chocolate">Your Shopping Bag</h2>
+              <h2 className="font-serif text-lg font-bold text-[#3E2723]">Your Shopping Bag</h2>
             </div>
             <button
               onClick={onClose}
-              className="p-1 rounded-full text-bakery-brown-light hover:text-bakery-chocolate hover:bg-bakery-warm-white transition-colors"
+              className="p-1 rounded-full text-[#8D6E63] hover:text-[#3E2723] hover:bg-[#FDFBF7] transition-colors"
             >
               <X className="w-5 h-5" />
             </button>
@@ -139,27 +139,27 @@ export default function CartDrawer({
                 {cart.map((item, idx) => (
                   <div
                     key={`${item.menuItem.id}-${idx}`}
-                    className="bg-white p-4 rounded-2xl border border-bakery-clay/30 flex space-x-4 items-center justify-between"
+                    className="bg-white p-4 rounded-2xl border border-[#E0D5C1] flex space-x-4 items-center justify-between shadow-sm"
                   >
                     {/* Left: Thumbnail & Name details */}
                     <div className="flex items-center space-x-3 flex-grow min-w-0">
                       <img
                         src={item.menuItem.image}
                         alt={item.menuItem.name}
-                        className="w-12 h-12 rounded-lg object-cover bg-bakery-warm-white shrink-0"
+                        className="w-12 h-12 rounded-lg object-cover bg-[#FDFBF7] shrink-0 border border-[#E0D5C1]/30"
                         referrerPolicy="no-referrer"
                       />
                       <div className="min-w-0">
-                        <h4 className="text-xs uppercase font-bold tracking-wider text-bakery-brown-light">
+                        <h4 className="text-[9px] uppercase font-bold tracking-wider text-[#8D6E63]">
                           {item.menuItem.category}
                         </h4>
-                        <h3 className="font-serif font-bold text-sm text-bakery-chocolate truncate">
+                        <h3 className="font-serif font-bold text-sm text-[#3E2723] truncate">
                           {item.menuItem.name}
                         </h3>
-                        <p className="text-[10px] text-bakery-brown-dark/70 font-light truncate">
+                        <p className="text-[10px] text-[#5D4037]/80 truncate">
                           {item.menuItem.description}
                         </p>
-                        <span className="font-mono text-xs font-bold text-bakery-chocolate mt-1 block">
+                        <span className="font-mono text-xs font-bold text-[#3E2723] mt-1 block">
                           ${item.menuItem.price.toFixed(2)} each
                         </span>
                       </div>
@@ -167,17 +167,17 @@ export default function CartDrawer({
 
                     {/* Right: Quantity modifiers, Delete button */}
                     <div className="flex flex-col items-end space-y-2 shrink-0">
-                      <div className="flex items-center border border-bakery-clay rounded-lg overflow-hidden h-7 bg-bakery-cream">
+                      <div className="flex items-center border border-[#E0D5C1] rounded-lg overflow-hidden h-7 bg-[#FDFBF7]">
                         <button
                           onClick={() => onUpdateQuantity(idx, item.quantity - 1)}
-                          className="px-2 text-xs font-bold text-bakery-brown-dark hover:bg-bakery-clay"
+                          className="px-2 text-xs font-bold text-[#3E2723] hover:bg-[#E0D5C1]/40"
                         >
                           -
                         </button>
-                        <span className="px-2 font-mono text-xs font-semibold text-bakery-chocolate">{item.quantity}</span>
+                        <span className="px-2 font-mono text-xs font-semibold text-[#3E2723]">{item.quantity}</span>
                         <button
                           onClick={() => onUpdateQuantity(idx, item.quantity + 1)}
-                          className="px-2 text-xs font-bold text-bakery-brown-dark hover:bg-bakery-clay"
+                          className="px-2 text-xs font-bold text-[#3E2723] hover:bg-[#E0D5C1]/40"
                         >
                           +
                         </button>
@@ -195,16 +195,16 @@ export default function CartDrawer({
               </div>
             ) : (
               <div className="text-center py-20 px-4 space-y-4">
-                <div className="w-16 h-16 rounded-full bg-bakery-warm-white flex items-center justify-center text-bakery-brown-light mx-auto">
+                <div className="w-16 h-16 rounded-full bg-[#F5E6D3]/30 border border-[#E0D5C1]/40 flex items-center justify-center text-[#8D6E63] mx-auto">
                   <ShoppingBag className="w-8 h-8" />
                 </div>
-                <h3 className="font-serif text-lg font-bold text-bakery-chocolate">Your Bag is Empty</h3>
-                <p className="text-xs text-bakery-brown-light leading-relaxed max-w-xs mx-auto">
+                <h3 className="font-serif text-lg font-bold text-[#3E2723]">Your Bag is Empty</h3>
+                <p className="text-xs text-[#8D6E63] leading-relaxed max-w-xs mx-auto">
                   Browse our gourmet categories of sourdoughs, pastries, and custom celebration cakes to add freshly baked treats to your order!
                 </p>
                 <button
                   onClick={onClose}
-                  className="px-5 py-2.5 rounded-xl bg-bakery-chocolate text-white text-xs font-semibold uppercase tracking-wider"
+                  className="px-5 py-2.5 rounded-xl bg-[#3E2723] text-white text-xs font-semibold uppercase tracking-wider"
                 >
                   Browse Menu
                 </button>
@@ -213,11 +213,11 @@ export default function CartDrawer({
 
             {/* Cart Utilities (Only shows if items present) */}
             {cart.length > 0 && (
-              <div className="space-y-6 pt-6 border-t border-bakery-clay/30">
+              <div className="space-y-6 pt-6 border-t border-[#E0D5C1]/50">
                 
                 {/* Fulfillment Picker */}
                 <div className="space-y-2">
-                  <label className="text-[10px] font-bold uppercase tracking-widest text-bakery-brown-light block">
+                  <label className="text-[10px] font-bold uppercase tracking-wider text-[#8D6E63] block">
                     Fulfillment Mode
                   </label>
                   <div className="grid grid-cols-2 gap-2">
@@ -225,8 +225,8 @@ export default function CartDrawer({
                       onClick={() => setDeliveryType('pickup')}
                       className={`py-2 rounded-xl text-xs font-bold uppercase border transition-all ${
                         deliveryType === 'pickup'
-                          ? 'border-bakery-chocolate bg-bakery-chocolate text-white'
-                          : 'border-bakery-clay bg-white text-bakery-brown-dark hover:bg-bakery-cream'
+                          ? 'border-[#3E2723] bg-[#3E2723] text-white'
+                          : 'border-[#E0D5C1] bg-white text-[#3E2723] hover:bg-[#FDFBF7]'
                       }`}
                     >
                       🏪 Store Pickup
@@ -235,15 +235,15 @@ export default function CartDrawer({
                       onClick={() => setDeliveryType('delivery')}
                       className={`py-2 rounded-xl text-xs font-bold uppercase border transition-all flex items-center justify-center space-x-1 ${
                         deliveryType === 'delivery'
-                          ? 'border-bakery-chocolate bg-bakery-chocolate text-white'
-                          : 'border-bakery-clay bg-white text-bakery-brown-dark hover:bg-bakery-cream'
+                          ? 'border-[#3E2723] bg-[#3E2723] text-white'
+                          : 'border-[#E0D5C1] bg-white text-[#3E2723] hover:bg-[#FDFBF7]'
                       }`}
                     >
                       <Truck className="w-3.5 h-3.5" />
                       <span>Delivery (+$5)</span>
                     </button>
                   </div>
-                  <p className="text-[10px] text-bakery-brown-light leading-relaxed font-light italic">
+                  <p className="text-[10px] text-[#8D6E63] leading-relaxed font-light italic">
                     {deliveryType === 'pickup'
                       ? `Pick up your warm baked goods at our physical bakery location during business hours.`
                       : `Get delivery directly to your home within our 5-mile radius.`}
@@ -252,7 +252,7 @@ export default function CartDrawer({
 
                 {/* Promo Code Input */}
                 <div className="space-y-2">
-                  <label className="text-[10px] font-bold uppercase tracking-widest text-bakery-brown-light block">
+                  <label className="text-[10px] font-bold uppercase tracking-wider text-[#8D6E63] block">
                     Promo / Coupon Code
                   </label>
                   <form onSubmit={handleApplyPromoSubmit} className="flex gap-2">
@@ -261,11 +261,11 @@ export default function CartDrawer({
                       placeholder="e.g. FRESHSTART"
                       value={promoInput}
                       onChange={(e) => setPromoInput(e.target.value)}
-                      className="flex-grow px-3.5 py-2 border border-bakery-clay rounded-xl text-xs uppercase font-mono text-bakery-chocolate focus:outline-none"
+                      className="flex-grow px-3.5 py-2 border border-[#E0D5C1] rounded-xl text-xs uppercase font-mono text-[#3E2723] focus:outline-none focus:ring-1 focus:ring-[#D4AF37]"
                     />
                     <button
                       type="submit"
-                      className="px-4 py-2 bg-bakery-chocolate text-white text-xs font-bold uppercase rounded-xl hover:bg-bakery-gold hover:text-bakery-chocolate transition-all"
+                      className="px-4 py-2 bg-[#3E2723] text-white text-xs font-bold uppercase rounded-xl hover:bg-[#D4AF37] transition-all"
                     >
                       Apply
                     </button>
@@ -283,7 +283,7 @@ export default function CartDrawer({
 
                 {/* Chef Notes input */}
                 <div className="space-y-2">
-                  <label className="text-[10px] font-bold uppercase tracking-widest text-bakery-brown-light block">
+                  <label className="text-[10px] font-bold uppercase tracking-wider text-[#8D6E63] block">
                     Special Chef Instructions
                   </label>
                   <textarea
@@ -291,7 +291,7 @@ export default function CartDrawer({
                     placeholder="Allergies, packaging instructions, custom icing notes..."
                     value={customerNote}
                     onChange={(e) => setCustomerNote(e.target.value)}
-                    className="w-full px-3.5 py-2.5 border border-bakery-clay rounded-xl text-xs text-bakery-chocolate bg-white focus:outline-none placeholder:text-bakery-brown-light/40"
+                    className="w-full px-3.5 py-2.5 border border-[#E0D5C1] rounded-xl text-xs text-[#3E2723] bg-white focus:outline-none focus:ring-1 focus:ring-[#D4AF37] placeholder:text-[#8D6E63]/40"
                   />
                 </div>
 
@@ -301,9 +301,9 @@ export default function CartDrawer({
 
           {/* Checkout / Pricing footer block */}
           {cart.length > 0 && (
-            <div className="bg-white border-t border-bakery-clay/35 px-6 py-6 space-y-4">
+            <div className="bg-white border-t border-[#E0D5C1]/40 px-6 py-6 space-y-4">
               <div className="space-y-2 text-xs">
-                <div className="flex justify-between text-bakery-brown-light">
+                <div className="flex justify-between text-[#8D6E63]">
                   <span>Subtotal:</span>
                   <span className="font-mono">${subtotal.toFixed(2)}</span>
                 </div>
@@ -314,12 +314,12 @@ export default function CartDrawer({
                   </div>
                 )}
                 {deliveryType === 'delivery' && (
-                  <div className="flex justify-between text-bakery-brown-light">
+                  <div className="flex justify-between text-[#8D6E63]">
                     <span>Delivery Fee:</span>
                     <span className="font-mono">+$5.00</span>
                   </div>
                 )}
-                <div className="flex justify-between text-base font-extrabold text-bakery-chocolate pt-2 border-t border-dashed border-bakery-clay/40">
+                <div className="flex justify-between text-base font-extrabold text-[#3E2723] pt-2 border-t border-dashed border-[#E0D5C1]">
                   <span>Estimated Total:</span>
                   <span className="font-mono text-lg">${finalTotal.toFixed(2)}</span>
                 </div>
@@ -328,13 +328,13 @@ export default function CartDrawer({
               {/* Order via WhatsApp API anchor */}
               <button
                 onClick={handleWhatsAppCheckout}
-                className="w-full py-4 rounded-xl bg-green-600 hover:bg-green-700 text-white font-bold uppercase tracking-wide text-xs transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg"
+                className="w-full py-4 rounded-xl bg-green-600 hover:bg-green-700 text-white font-bold uppercase tracking-wide text-xs transition-all duration-300 flex items-center justify-center space-x-2 shadow-sm"
               >
                 <MessageSquareCode className="w-4 h-4" />
                 <span>Pre-Order via WhatsApp</span>
               </button>
 
-              <div className="flex items-center justify-center space-x-1 text-[10px] text-bakery-brown-light">
+              <div className="flex items-center justify-center space-x-1 text-[10px] text-[#8D6E63]">
                 <ShieldCheck className="w-3.5 h-3.5 text-green-600 shrink-0" />
                 <span>Payments handled securely upon delivery/pickup</span>
               </div>

@@ -85,7 +85,7 @@ export default function Navbar({ cart, onOpenCart }: NavbarProps) {
       id="main-nav"
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         isScrolled
-          ? 'bg-bakery-cream/95 backdrop-blur-md shadow-md py-3 border-b border-bakery-clay/30'
+          ? 'bg-[#FDFBF7]/95 backdrop-blur-md shadow-sm py-3 border-b border-[#E0D5C1]'
           : 'bg-transparent py-5'
       }`}
     >
@@ -95,16 +95,16 @@ export default function Navbar({ cart, onOpenCart }: NavbarProps) {
           <a
             href="#home"
             onClick={(e) => handleLinkClick(e, '#home')}
-            className="flex items-center space-x-2 group"
+            className="flex items-center gap-2.5 group"
           >
-            <div className="w-10 h-10 rounded-xl bg-bakery-chocolate flex items-center justify-center text-bakery-gold group-hover:scale-105 transition-transform duration-300">
-              <Coffee className="w-5 h-5" />
+            <div className="w-9 h-9 bg-[#3E2723] rounded-lg flex items-center justify-center text-[#FDFBF7] font-serif font-bold text-lg italic group-hover:scale-105 transition-transform duration-300 shadow-sm">
+              C
             </div>
             <div>
-              <span className="font-serif font-bold text-2xl tracking-wide text-bakery-chocolate block leading-none">
+              <span className="font-serif text-2xl font-bold italic text-[#3E2723] block leading-none">
                 Chow Box
               </span>
-              <span className="text-[10px] tracking-widest text-bakery-brown-light uppercase block font-medium mt-1">
+              <span className="text-[9px] tracking-widest text-[#795548] uppercase block font-medium mt-1">
                 Artisanal Bakery
               </span>
             </div>
@@ -117,8 +117,8 @@ export default function Navbar({ cart, onOpenCart }: NavbarProps) {
                 key={link.label}
                 href={link.href}
                 onClick={(e) => handleLinkClick(e, link.href)}
-                className={`text-sm font-medium tracking-wide transition-colors duration-300 uppercase hover:text-bakery-gold ${
-                  isScrolled ? 'text-bakery-chocolate' : 'text-bakery-chocolate/90 lg:text-bakery-cream'
+                className={`text-xs font-semibold uppercase tracking-wider transition-colors duration-300 border-b-2 border-transparent hover:border-[#D4AF37] hover:text-[#3E2723] pb-1 ${
+                  isScrolled ? 'text-[#795548]' : 'text-white lg:text-[#FDFBF7]'
                 }`}
               >
                 {link.label}

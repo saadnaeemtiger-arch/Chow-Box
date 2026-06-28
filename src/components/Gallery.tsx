@@ -43,20 +43,20 @@ export default function Gallery() {
   ];
 
   return (
-    <section id="gallery" className="py-24 bg-bakery-cream scroll-mt-10">
+    <section id="gallery" className="py-20 bg-[#FDFBF7] scroll-mt-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header Block */}
-        <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
-          <div className="inline-flex items-center space-x-2 text-bakery-gold text-sm font-semibold uppercase tracking-wider">
+        <div className="text-center max-w-2xl mx-auto mb-12 space-y-3">
+          <div className="inline-flex items-center space-x-2 text-[#D4AF37] text-xs font-bold uppercase tracking-wider">
             <ImageIcon className="w-4 h-4" />
             <span>Visual Tour of Chow Box</span>
           </div>
-          <h2 className="font-serif text-4xl sm:text-5xl font-bold text-bakery-chocolate tracking-tight">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-black text-[#3E2723]">
             Our Bakery Gallery
           </h2>
-          <div className="w-20 h-1 bg-bakery-gold mx-auto rounded-full" />
-          <p className="text-sm text-bakery-brown-light font-light leading-relaxed">
+          <div className="w-16 h-1 bg-[#D4AF37] mx-auto rounded-full" />
+          <p className="text-xs sm:text-sm text-[#8D6E63] font-light leading-relaxed">
             Feast your eyes on the daily baking processes, freshly baked artisan sourdough crusts, and warm luxury cafe displays.
           </p>
         </div>
@@ -71,10 +71,10 @@ export default function Gallery() {
                   setActiveTab(tab.value);
                   setSelectedImageIdx(null); // reset selected
                 }}
-                className={`px-4.5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider whitespace-nowrap transition-all duration-300 ${
+                className={`px-4.5 py-2.5 rounded-xl text-[10px] font-bold uppercase tracking-wider whitespace-nowrap transition-all duration-300 ${
                   activeTab === tab.value
-                    ? 'bg-bakery-chocolate text-bakery-cream shadow'
-                    : 'bg-white text-bakery-brown-dark hover:bg-bakery-clay/30 border border-bakery-clay/40'
+                    ? 'bg-[#3E2723] text-white shadow-sm'
+                    : 'bg-white text-[#3E2723] hover:bg-[#FDFBF7] border border-[#E0D5C1] hover:border-[#D4AF37]'
                 }`}
               >
                 {tab.label}
@@ -89,29 +89,29 @@ export default function Gallery() {
             <div
               key={item.id}
               onClick={() => setSelectedImageIdx(index)}
-              className="group relative rounded-2xl overflow-hidden aspect-square sm:aspect-video lg:aspect-square bg-bakery-warm-white border border-bakery-clay/35 cursor-pointer shadow-md hover:shadow-2xl transition-all duration-500 overflow-hidden"
+              className="group relative rounded-[2rem] overflow-hidden aspect-square sm:aspect-video lg:aspect-square bg-[#FDFBF7] border border-[#E0D5C1] hover:border-[#D4AF37] cursor-pointer shadow-sm hover:shadow-md transition-all duration-500"
             >
               {/* Image thumbnail */}
               <img
                 src={item.image}
                 alt={item.title}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-700"
                 referrerPolicy="no-referrer"
               />
 
               {/* Hover Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-bakery-chocolate/95 via-bakery-chocolate/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#3E2723]/95 via-[#3E2723]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6" />
 
               {/* Hover Zoom and Title Details */}
               <div className="absolute inset-0 flex flex-col justify-end p-6 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300 z-10">
-                <div className="flex items-center space-x-2 text-bakery-gold text-[10px] font-bold uppercase tracking-widest mb-1">
+                <div className="flex items-center space-x-2 text-[#D4AF37] text-[9px] font-bold uppercase tracking-widest mb-1">
                   <Sparkles className="w-3 h-3" />
                   <span>{item.category}</span>
                 </div>
                 <h3 className="font-serif font-bold text-lg text-white leading-tight">
                   {item.title}
                 </h3>
-                <div className="mt-3 inline-flex items-center space-x-1 text-xs text-bakery-clay font-medium uppercase tracking-wider">
+                <div className="mt-3 inline-flex items-center space-x-1 text-[10px] text-[#E9DCC9]/80 font-bold uppercase tracking-wider">
                   <ZoomIn className="w-3.5 h-3.5" />
                   <span>Click to Expand</span>
                 </div>
@@ -123,7 +123,7 @@ export default function Gallery() {
         {/* Lightbox Modal */}
         {selectedImageIdx !== null && filteredGallery[selectedImageIdx] && (
           <div
-            className="fixed inset-0 z-50 bg-bakery-chocolate/95 backdrop-blur-md flex items-center justify-center p-4 animate-in fade-in duration-300"
+            className="fixed inset-0 z-50 bg-[#3E2723]/95 backdrop-blur-md flex items-center justify-center p-4 animate-in fade-in duration-300"
             onClick={() => setSelectedImageIdx(null)}
           >
             {/* Close action */}
@@ -149,7 +149,7 @@ export default function Gallery() {
               className="relative max-w-4xl max-h-[80vh] flex flex-col items-center justify-center space-y-4 text-center z-30"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10 bg-black/40 flex items-center justify-center">
+              <div className="rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white/10 bg-black/40 flex items-center justify-center">
                 <img
                   src={filteredGallery[selectedImageIdx].image}
                   alt={filteredGallery[selectedImageIdx].title}
@@ -158,10 +158,10 @@ export default function Gallery() {
                 />
               </div>
               <div className="space-y-1 select-none">
-                <span className="text-[10px] uppercase font-bold tracking-widest text-bakery-gold">
+                <span className="text-[10px] uppercase font-bold tracking-widest text-[#D4AF37]">
                   {filteredGallery[selectedImageIdx].category}
                 </span>
-                <h3 className="font-serif text-lg text-bakery-cream font-bold">
+                <h3 className="font-serif text-lg text-[#FDFBF7] font-bold">
                   {filteredGallery[selectedImageIdx].title}
                 </h3>
               </div>

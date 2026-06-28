@@ -99,30 +99,30 @@ export default function CakeCustomizer({ onAddToCart, onClose }: CakeCustomizerP
   };
 
   return (
-    <div id="customizer" className="py-24 bg-bakery-warm-white relative scroll-mt-10">
+    <div id="customizer" className="py-20 bg-[#FDFBF7] relative scroll-mt-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Title block */}
-        <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
-          <div className="inline-flex items-center space-x-2 text-bakery-gold text-sm font-semibold uppercase tracking-wider">
+        <div className="text-center max-w-2xl mx-auto mb-12 space-y-3">
+          <div className="inline-flex items-center space-x-2 text-[#D4AF37] text-xs font-bold uppercase tracking-wider">
             <Sparkles className="w-4 h-4" />
             <span>Interactive Pastry Studio</span>
           </div>
-          <h2 className="font-serif text-4xl sm:text-5xl font-bold text-bakery-chocolate tracking-tight">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-black text-[#3E2723]">
             Design Your Custom Cake
           </h2>
-          <div className="w-20 h-1 bg-bakery-gold mx-auto rounded-full" />
-          <p className="text-sm text-bakery-brown-light font-light leading-relaxed">
+          <div className="w-16 h-1 bg-[#D4AF37] mx-auto rounded-full" />
+          <p className="text-xs sm:text-sm text-[#8D6E63] font-light leading-relaxed">
             Unleash your creativity. Choose your cake tier size, cake sponge flavour, gourmet filling cream, visual frosting style, and delicate sweet toppings, then order instantly!
           </p>
         </div>
 
         {/* Customizer Layout Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
           
           {/* Left Column: Visual Real-time Render Stand (4 Tiers of visual representation) */}
-          <div className="lg:col-span-5 flex flex-col items-center justify-between bg-white rounded-3xl p-8 border border-bakery-clay/50 shadow-lg relative min-h-[500px]">
-            <div className="absolute top-4 left-4 flex items-center space-x-1.5 text-xs text-bakery-brown-light font-bold bg-bakery-cream px-3 py-1.5 rounded-full border border-bakery-clay/20">
+          <div className="lg:col-span-5 flex flex-col items-center justify-between bg-white rounded-[2rem] p-8 border border-[#E0D5C1] shadow-sm hover:border-[#D4AF37] transition-all duration-300 relative min-h-[500px]">
+            <div className="absolute top-4 left-4 flex items-center space-x-1.5 text-[10px] text-[#8D6E63] font-bold bg-[#FDFBF7] px-3 py-1.5 rounded-full border border-[#E0D5C1]">
               <Eye className="w-3.5 h-3.5" />
               <span>Real-Time Cake Mockup</span>
             </div>
@@ -145,7 +145,7 @@ export default function CakeCustomizer({ onAddToCart, onClose }: CakeCustomizerP
               {selectedTier.id === 'double' && (
                 <div className="relative w-40 flex flex-col items-center z-20 -mb-2 transition-all duration-500 scale-90">
                   {/* Piped border rosettes indicator */}
-                  <div className="w-full h-4 rounded-full bg-white opacity-85 absolute top-0 border-b border-bakery-clay/30" />
+                  <div className="w-full h-4 rounded-full bg-white opacity-85 absolute top-0 border-b border-[#E0D5C1]/30" />
                   {/* Sponge filling visual sandwich slice */}
                   <div
                     style={{ backgroundColor: selectedFrosting.color }}
@@ -167,7 +167,7 @@ export default function CakeCustomizer({ onAddToCart, onClose }: CakeCustomizerP
                   </div>
                 )}
                 {/* Piped border rosettes indicator */}
-                <div className="w-full h-5 rounded-full bg-white opacity-85 absolute top-0 border-b border-bakery-clay/30" />
+                <div className="w-full h-5 rounded-full bg-white opacity-85 absolute top-0 border-b border-[#E0D5C1]/30" />
                 {/* Sponge filling visual sandwich slice */}
                 <div
                   style={{ backgroundColor: selectedFrosting.color }}
@@ -185,18 +185,18 @@ export default function CakeCustomizer({ onAddToCart, onClose }: CakeCustomizerP
             </div>
 
             {/* Spec Highlights Card */}
-            <div className="w-full bg-bakery-cream rounded-2xl p-4 border border-bakery-clay/40 space-y-2 text-xs">
-              <div className="flex justify-between font-bold text-bakery-chocolate">
+            <div className="w-full bg-[#FDFBF7] rounded-2xl p-4 border border-[#E0D5C1] space-y-2 text-xs">
+              <div className="flex justify-between font-bold text-[#3E2723]">
                 <span>Selected Sponge:</span>
-                <span className="text-bakery-brown-light">{selectedSponge.name}</span>
+                <span className="text-[#8D6E63]">{selectedSponge.name}</span>
               </div>
-              <div className="flex justify-between font-bold text-bakery-chocolate">
+              <div className="flex justify-between font-bold text-[#3E2723]">
                 <span>Core Filling Cream:</span>
-                <span className="text-bakery-brown-light">{selectedFilling.name}</span>
+                <span className="text-[#8D6E63]">{selectedFilling.name}</span>
               </div>
-              <div className="flex justify-between font-bold text-bakery-chocolate">
+              <div className="flex justify-between font-bold text-[#3E2723]">
                 <span>Frosting Style:</span>
-                <span className="text-bakery-brown-light">{selectedFrosting.name}</span>
+                <span className="text-[#8D6E63]">{selectedFrosting.name}</span>
               </div>
               {plaqueText && (
                 <div className="flex justify-between font-bold text-amber-800">
@@ -208,13 +208,13 @@ export default function CakeCustomizer({ onAddToCart, onClose }: CakeCustomizerP
           </div>
 
           {/* Right Column: Customizer Selector Panels */}
-          <div className="lg:col-span-7 flex flex-col justify-between space-y-8 bg-white rounded-3xl p-8 border border-bakery-clay/50 shadow-lg">
+          <div className="lg:col-span-7 flex flex-col justify-between space-y-8 bg-white rounded-[2rem] p-8 border border-[#E0D5C1] shadow-sm hover:border-[#D4AF37] transition-all duration-300">
             
             <div className="space-y-6">
               {/* Option 1: Choose Cake Tier Size */}
               <div className="space-y-3">
-                <label className="text-sm font-bold uppercase tracking-wider text-bakery-chocolate flex items-center space-x-1.5">
-                  <span className="w-5 h-5 rounded-full bg-bakery-gold/20 text-bakery-chocolate-dark font-mono text-[10px] flex items-center justify-center font-bold">1</span>
+                <label className="text-sm font-bold uppercase tracking-wider text-[#3E2723] flex items-center space-x-1.5">
+                  <span className="w-5 h-5 rounded-full bg-[#D4AF37]/25 text-[#3E2723] font-mono text-[10px] flex items-center justify-center font-bold">1</span>
                   <span>Select Size & Tier Layout</span>
                 </label>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -224,16 +224,16 @@ export default function CakeCustomizer({ onAddToCart, onClose }: CakeCustomizerP
                       onClick={() => setSelectedTier(tier)}
                       className={`p-4 rounded-xl text-left border transition-all duration-300 ${
                         selectedTier.id === tier.id
-                          ? 'border-bakery-chocolate bg-bakery-cream shadow-sm ring-1 ring-bakery-chocolate'
-                          : 'border-bakery-clay hover:border-bakery-brown-light/60 bg-white'
+                          ? 'border-[#3E2723] bg-[#FDFBF7] shadow-sm ring-1 ring-[#3E2723]'
+                          : 'border-[#E0D5C1] hover:border-[#D4AF37] bg-white'
                       }`}
                     >
                       <div className="flex justify-between items-center">
-                        <span className="text-xs uppercase font-bold text-bakery-chocolate">{tier.name}</span>
-                        {selectedTier.id === tier.id && <Check className="w-3.5 h-3.5 text-bakery-gold" />}
+                        <span className="text-xs uppercase font-bold text-[#3E2723]">{tier.name}</span>
+                        {selectedTier.id === tier.id && <Check className="w-3.5 h-3.5 text-[#D4AF37]" />}
                       </div>
-                      <p className="text-[11px] text-bakery-brown-light mt-1">{tier.description}</p>
-                      <span className="text-xs font-mono font-bold text-bakery-chocolate mt-2 block">${tier.price.toFixed(2)} Base</span>
+                      <p className="text-[11px] text-[#8D6E63] mt-1">{tier.description}</p>
+                      <span className="text-xs font-mono font-bold text-[#3E2723] mt-2 block">${tier.price.toFixed(2)} Base</span>
                     </button>
                   ))}
                 </div>
@@ -241,8 +241,8 @@ export default function CakeCustomizer({ onAddToCart, onClose }: CakeCustomizerP
 
               {/* Option 2: Choose Sponge Flavour */}
               <div className="space-y-3">
-                <label className="text-sm font-bold uppercase tracking-wider text-bakery-chocolate flex items-center space-x-1.5">
-                  <span className="w-5 h-5 rounded-full bg-bakery-gold/20 text-bakery-chocolate-dark font-mono text-[10px] flex items-center justify-center font-bold">2</span>
+                <label className="text-sm font-bold uppercase tracking-wider text-[#3E2723] flex items-center space-x-1.5">
+                  <span className="w-5 h-5 rounded-full bg-[#D4AF37]/25 text-[#3E2723] font-mono text-[10px] flex items-center justify-center font-bold">2</span>
                   <span>Choose Sponge Flavor</span>
                 </label>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
@@ -252,14 +252,14 @@ export default function CakeCustomizer({ onAddToCart, onClose }: CakeCustomizerP
                       onClick={() => setSelectedSponge(sp)}
                       className={`p-3 rounded-xl border text-center transition-all duration-300 flex flex-col justify-between items-center space-y-2 h-28 ${
                         selectedSponge.id === sp.id
-                          ? 'border-bakery-chocolate bg-bakery-cream shadow-sm'
-                          : 'border-bakery-clay hover:border-bakery-brown-light/60 bg-white'
+                          ? 'border-[#3E2723] bg-[#FDFBF7] shadow-sm'
+                          : 'border-[#E0D5C1] hover:border-[#D4AF37] bg-white'
                       }`}
                     >
                       <div style={{ backgroundColor: sp.color }} className="w-6 h-6 rounded-md shadow-md border border-white" />
                       <div>
-                        <span className="text-[10px] font-bold text-bakery-chocolate leading-tight block">{sp.name}</span>
-                        {sp.price > 0 && <span className="text-[9px] font-mono font-semibold text-bakery-brown-light block mt-0.5">+${sp.price.toFixed(2)}</span>}
+                        <span className="text-[10px] font-bold text-[#3E2723] leading-tight block">{sp.name}</span>
+                        {sp.price > 0 && <span className="text-[9px] font-mono font-semibold text-[#8D6E63] block mt-0.5">+${sp.price.toFixed(2)}</span>}
                       </div>
                     </button>
                   ))}
@@ -268,8 +268,8 @@ export default function CakeCustomizer({ onAddToCart, onClose }: CakeCustomizerP
 
               {/* Option 3: Choose Filling Cream */}
               <div className="space-y-3">
-                <label className="text-sm font-bold uppercase tracking-wider text-bakery-chocolate flex items-center space-x-1.5">
-                  <span className="w-5 h-5 rounded-full bg-bakery-gold/20 text-bakery-chocolate-dark font-mono text-[10px] flex items-center justify-center font-bold">3</span>
+                <label className="text-sm font-bold uppercase tracking-wider text-[#3E2723] flex items-center space-x-1.5">
+                  <span className="w-5 h-5 rounded-full bg-[#D4AF37]/25 text-[#3E2723] font-mono text-[10px] flex items-center justify-center font-bold">3</span>
                   <span>Choose Gourmet Filling Cream</span>
                 </label>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
@@ -279,14 +279,14 @@ export default function CakeCustomizer({ onAddToCart, onClose }: CakeCustomizerP
                       onClick={() => setSelectedFilling(fill)}
                       className={`p-3 rounded-xl border text-center transition-all duration-300 flex flex-col justify-between items-center space-y-2 h-28 ${
                         selectedFilling.id === fill.id
-                          ? 'border-bakery-chocolate bg-bakery-cream shadow-sm'
-                          : 'border-bakery-clay hover:border-bakery-brown-light/60 bg-white'
+                          ? 'border-[#3E2723] bg-[#FDFBF7] shadow-sm'
+                          : 'border-[#E0D5C1] hover:border-[#D4AF37] bg-white'
                       }`}
                     >
                       <div style={{ backgroundColor: fill.color }} className="w-6 h-6 rounded-full shadow-md border border-white" />
                       <div>
-                        <span className="text-[10px] font-bold text-bakery-chocolate leading-tight block">{fill.name}</span>
-                        {fill.price > 0 && <span className="text-[9px] font-mono font-semibold text-bakery-brown-light block mt-0.5">+${fill.price.toFixed(2)}</span>}
+                        <span className="text-[10px] font-bold text-[#3E2723] leading-tight block">{fill.name}</span>
+                        {fill.price > 0 && <span className="text-[9px] font-mono font-semibold text-[#8D6E63] block mt-0.5">+${fill.price.toFixed(2)}</span>}
                       </div>
                     </button>
                   ))}
@@ -295,8 +295,8 @@ export default function CakeCustomizer({ onAddToCart, onClose }: CakeCustomizerP
 
               {/* Option 4: Choose Frosting Style */}
               <div className="space-y-3">
-                <label className="text-sm font-bold uppercase tracking-wider text-bakery-chocolate flex items-center space-x-1.5">
-                  <span className="w-5 h-5 rounded-full bg-bakery-gold/20 text-bakery-chocolate-dark font-mono text-[10px] flex items-center justify-center font-bold">4</span>
+                <label className="text-sm font-bold uppercase tracking-wider text-[#3E2723] flex items-center space-x-1.5">
+                  <span className="w-5 h-5 rounded-full bg-[#D4AF37]/25 text-[#3E2723] font-mono text-[10px] flex items-center justify-center font-bold">4</span>
                   <span>Choose Visual Frosting Style</span>
                 </label>
                 <div className="grid grid-cols-3 gap-3">
@@ -306,15 +306,15 @@ export default function CakeCustomizer({ onAddToCart, onClose }: CakeCustomizerP
                       onClick={() => setSelectedFrosting(frost)}
                       className={`p-3 rounded-xl border text-center transition-all duration-300 flex flex-col items-center justify-between h-24 ${
                         selectedFrosting.id === frost.id
-                          ? 'border-bakery-chocolate bg-bakery-cream shadow-sm'
-                          : 'border-bakery-clay hover:border-bakery-brown-light/60 bg-white'
+                          ? 'border-[#3E2723] bg-[#FDFBF7] shadow-sm'
+                          : 'border-[#E0D5C1] hover:border-[#D4AF37] bg-white'
                       }`}
                     >
-                      <div style={{ backgroundColor: frost.color }} className={`w-12 h-6 rounded border-2 ${frost.border} border-bakery-brown-light shadow-sm`} />
+                      <div style={{ backgroundColor: frost.color }} className={`w-12 h-6 rounded border-2 ${frost.border} border-[#8D6E63] shadow-sm`} />
                       <div>
-                        <span className="text-[10px] font-bold text-bakery-chocolate block">{frost.name}</span>
+                        <span className="text-[10px] font-bold text-[#3E2723] block">{frost.name}</span>
                         {frost.price !== 0 && (
-                          <span className="text-[9px] font-mono text-bakery-brown-light block mt-0.5">
+                          <span className="text-[9px] font-mono text-[#8D6E63] block mt-0.5">
                             {frost.price > 0 ? `+$${frost.price.toFixed(2)}` : `-$${Math.abs(frost.price).toFixed(2)}`}
                           </span>
                         )}
@@ -326,8 +326,8 @@ export default function CakeCustomizer({ onAddToCart, onClose }: CakeCustomizerP
 
               {/* Option 5: Choose Toppings (Multiple) */}
               <div className="space-y-3">
-                <label className="text-sm font-bold uppercase tracking-wider text-bakery-chocolate flex items-center space-x-1.5">
-                  <span className="w-5 h-5 rounded-full bg-bakery-gold/20 text-bakery-chocolate-dark font-mono text-[10px] flex items-center justify-center font-bold">5</span>
+                <label className="text-sm font-bold uppercase tracking-wider text-[#3E2723] flex items-center space-x-1.5">
+                  <span className="w-5 h-5 rounded-full bg-[#D4AF37]/25 text-[#3E2723] font-mono text-[10px] flex items-center justify-center font-bold">5</span>
                   <span>Gourmet Toppings (Select Multiple)</span>
                 </label>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
@@ -339,13 +339,13 @@ export default function CakeCustomizer({ onAddToCart, onClose }: CakeCustomizerP
                         onClick={() => handleToppingToggle(top.id)}
                         className={`p-3 rounded-xl border text-center transition-all duration-300 flex flex-col justify-center items-center space-y-1.5 ${
                           isSelected
-                            ? 'border-bakery-chocolate bg-bakery-cream shadow-sm ring-1 ring-bakery-chocolate'
-                            : 'border-bakery-clay hover:border-bakery-brown-light/60 bg-white'
+                            ? 'border-[#3E2723] bg-[#FDFBF7] shadow-sm ring-1 ring-[#3E2723]'
+                            : 'border-[#E0D5C1] hover:border-[#D4AF37] bg-white'
                         }`}
                       >
                         <span className="text-2xl">{top.icon}</span>
-                        <span className="text-[10px] font-bold text-bakery-chocolate leading-tight block">{top.name}</span>
-                        <span className="text-[9px] font-mono text-bakery-brown-light block">+${top.price.toFixed(2)}</span>
+                        <span className="text-[10px] font-bold text-[#3E2723] leading-tight block">{top.name}</span>
+                        <span className="text-[9px] font-mono text-[#8D6E63] block">+${top.price.toFixed(2)}</span>
                       </button>
                     );
                   })}
@@ -354,8 +354,8 @@ export default function CakeCustomizer({ onAddToCart, onClose }: CakeCustomizerP
 
               {/* Option 6: Custom Chocolate Plaque Message */}
               <div className="space-y-3">
-                <label className="text-sm font-bold uppercase tracking-wider text-bakery-chocolate flex items-center space-x-1.5">
-                  <span className="w-5 h-5 rounded-full bg-bakery-gold/20 text-bakery-chocolate-dark font-mono text-[10px] flex items-center justify-center font-bold">6</span>
+                <label className="text-sm font-bold uppercase tracking-wider text-[#3E2723] flex items-center space-x-1.5">
+                  <span className="w-5 h-5 rounded-full bg-[#D4AF37]/25 text-[#3E2723] font-mono text-[10px] flex items-center justify-center font-bold">6</span>
                   <span>Custom Written Message (Plaque)</span>
                 </label>
                 <input
@@ -364,21 +364,21 @@ export default function CakeCustomizer({ onAddToCart, onClose }: CakeCustomizerP
                   maxLength={32}
                   value={plaqueText}
                   onChange={(e) => setPlaqueText(e.target.value)}
-                  className="w-full px-4 py-3 rounded-xl border border-bakery-clay bg-white focus:outline-none focus:ring-2 focus:ring-bakery-chocolate focus:border-transparent text-sm text-bakery-chocolate"
+                  className="w-full px-4 py-3 rounded-xl border border-[#E0D5C1] bg-white focus:outline-none focus:ring-1 focus:ring-[#D4AF37] text-sm text-[#3E2723]"
                 />
               </div>
             </div>
 
             {/* Footer Summary & Cart Trigger */}
-            <div className="border-t border-bakery-clay/30 pt-6 mt-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div className="border-t border-[#E0D5C1]/40 pt-6 mt-6 flex flex-col sm:flex-row justify-between items-center gap-4">
               <div className="text-center sm:text-left">
-                <span className="text-xs text-bakery-brown-light uppercase tracking-wider block font-semibold">Total Customizer Price</span>
-                <span className="font-mono text-2xl sm:text-3xl font-bold text-bakery-chocolate block">${calculatedPrice.toFixed(2)}</span>
+                <span className="text-xs text-[#8D6E63] uppercase tracking-wider block font-semibold">Total Customizer Price</span>
+                <span className="font-mono text-2xl sm:text-3xl font-bold text-[#3E2723] block">${calculatedPrice.toFixed(2)}</span>
               </div>
               <div className="flex gap-3 w-full sm:w-auto">
                 <button
                   onClick={handleAddCustomCakeToCart}
-                  className="flex-grow sm:flex-grow-0 px-8 py-4 rounded-xl bg-bakery-chocolate text-bakery-cream hover:bg-bakery-gold hover:text-bakery-chocolate font-bold uppercase tracking-wide text-xs transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg"
+                  className="flex-grow sm:flex-grow-0 px-8 py-4 rounded-xl bg-[#3E2723] text-[#FDFBF7] hover:bg-[#D4AF37] hover:text-[#3E2723] font-bold uppercase tracking-wide text-xs transition-all duration-300 flex items-center justify-center space-x-2 shadow-sm"
                 >
                   <ShoppingBag className="w-4 h-4" />
                   <span>Add Custom Cake to Bag</span>

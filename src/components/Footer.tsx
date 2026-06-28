@@ -34,7 +34,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-bakery-chocolate text-bakery-cream pt-20 pb-10 border-t border-bakery-gold/20">
+    <footer className="bg-[#3E2723] text-[#FDFBF7] pt-20 pb-10 border-t border-[#E0D5C1]/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Main Grid split */}
@@ -43,28 +43,28 @@ export default function Footer() {
           {/* Brand details col (4 cols) */}
           <div className="md:col-span-4 space-y-6">
             <div className="flex items-center space-x-2.5">
-              <div className="w-10 h-10 rounded-xl bg-bakery-gold flex items-center justify-center text-bakery-chocolate">
+              <div className="w-10 h-10 rounded-xl bg-[#D4AF37] flex items-center justify-center text-[#3E2723]">
                 <Coffee className="w-5 h-5" />
               </div>
               <div>
                 <span className="font-serif font-bold text-2xl tracking-wide text-white block">Chow Box</span>
-                <span className="text-[10px] tracking-widest text-bakery-gold uppercase block font-medium">Artisanal Bakery</span>
+                <span className="text-[10px] tracking-widest text-[#D4AF37] uppercase block font-medium">Artisanal Bakery</span>
               </div>
             </div>
 
-            <p className="text-xs sm:text-sm text-bakery-clay/80 leading-relaxed font-light">
+            <p className="text-xs sm:text-sm text-[#E9DCC9]/80 leading-relaxed font-light">
               Crafting warm, delicious sourdough, gold laminated viennoiserie, custom designer celebration cakes, and rich espresso blends for our community with love.
             </p>
 
             {/* Social media handles */}
             <div className="flex space-x-4">
-              <a href={CONTACT_INFO.socials.instagram} target="_blank" rel="noreferrer" className="p-2.5 bg-white/5 hover:bg-bakery-gold hover:text-bakery-chocolate rounded-xl transition-all duration-300 text-bakery-clay" aria-label="Instagram">
+              <a href={CONTACT_INFO.socials.instagram} target="_blank" rel="noreferrer" className="p-2.5 bg-white/5 hover:bg-[#D4AF37] hover:text-[#3E2723] rounded-xl transition-all duration-300 text-[#E9DCC9]" aria-label="Instagram">
                 <Instagram className="w-4 h-4" />
               </a>
-              <a href={CONTACT_INFO.socials.facebook} target="_blank" rel="noreferrer" className="p-2.5 bg-white/5 hover:bg-bakery-gold hover:text-bakery-chocolate rounded-xl transition-all duration-300 text-bakery-clay" aria-label="Facebook">
+              <a href={CONTACT_INFO.socials.facebook} target="_blank" rel="noreferrer" className="p-2.5 bg-white/5 hover:bg-[#D4AF37] hover:text-[#3E2723] rounded-xl transition-all duration-300 text-[#E9DCC9]" aria-label="Facebook">
                 <Facebook className="w-4 h-4" />
               </a>
-              <a href={CONTACT_INFO.socials.twitter} target="_blank" rel="noreferrer" className="p-2.5 bg-white/5 hover:bg-bakery-gold hover:text-bakery-chocolate rounded-xl transition-all duration-300 text-bakery-clay" aria-label="Twitter">
+              <a href={CONTACT_INFO.socials.twitter} target="_blank" rel="noreferrer" className="p-2.5 bg-white/5 hover:bg-[#D4AF37] hover:text-[#3E2723] rounded-xl transition-all duration-300 text-[#E9DCC9]" aria-label="Twitter">
                 <Twitter className="w-4 h-4" />
               </a>
             </div>
@@ -72,35 +72,35 @@ export default function Footer() {
 
           {/* Quick Links col (3 cols) */}
           <div className="md:col-span-3 space-y-6">
-            <h4 className="font-serif text-lg font-bold text-white relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-8 after:h-0.5 after:bg-bakery-gold">
+            <h4 className="font-serif text-lg font-bold text-white relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-8 after:h-0.5 after:bg-[#D4AF37]">
               Quick Links
             </h4>
             <div className="flex flex-col space-y-2 text-xs sm:text-sm">
-              <a href="#home" onClick={(e) => handleLinkClick(e, '#home')} className="text-bakery-clay/80 hover:text-bakery-gold transition-colors py-1">Home Page</a>
-              <a href="#about" onClick={(e) => handleLinkClick(e, '#about')} className="text-bakery-clay/80 hover:text-bakery-gold transition-colors py-1">About Our Story</a>
-              <a href="#menu" onClick={(e) => handleLinkClick(e, '#menu')} className="text-bakery-clay/80 hover:text-bakery-gold transition-colors py-1">Gourmet Menu</a>
-              <a href="#offers" onClick={(e) => handleLinkClick(e, '#offers')} className="text-bakery-clay/80 hover:text-bakery-gold transition-colors py-1">Special Offers</a>
-              <a href="#customizer" onClick={(e) => handleLinkClick(e, '#customizer')} className="text-bakery-clay/80 hover:text-bakery-gold transition-colors py-1">Custom Cake Studio</a>
-              <a href="#gallery" onClick={(e) => handleLinkClick(e, '#gallery')} className="text-bakery-clay/80 hover:text-bakery-gold transition-colors py-1">Photo Gallery</a>
+              <a href="#home" onClick={(e) => handleLinkClick(e, '#home')} className="text-[#E9DCC9]/80 hover:text-[#D4AF37] transition-colors py-1">Home Page</a>
+              <a href="#about" onClick={(e) => handleLinkClick(e, '#about')} className="text-[#E9DCC9]/80 hover:text-[#D4AF37] transition-colors py-1">About Our Story</a>
+              <a href="#menu" onClick={(e) => handleLinkClick(e, '#menu')} className="text-[#E9DCC9]/80 hover:text-[#D4AF37] transition-colors py-1">Gourmet Menu</a>
+              <a href="#offers" onClick={(e) => handleLinkClick(e, '#offers')} className="text-[#E9DCC9]/80 hover:text-[#D4AF37] transition-colors py-1">Special Offers</a>
+              <a href="#customizer" onClick={(e) => handleLinkClick(e, '#customizer')} className="text-[#E9DCC9]/80 hover:text-[#D4AF37] transition-colors py-1">Custom Cake Studio</a>
+              <a href="#gallery" onClick={(e) => handleLinkClick(e, '#gallery')} className="text-[#E9DCC9]/80 hover:text-[#D4AF37] transition-colors py-1">Photo Gallery</a>
             </div>
           </div>
 
           {/* Contact Details col (2 cols) */}
           <div className="md:col-span-2 space-y-6">
-            <h4 className="font-serif text-lg font-bold text-white relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-8 after:h-0.5 after:bg-bakery-gold">
+            <h4 className="font-serif text-lg font-bold text-white relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-8 after:h-0.5 after:bg-[#D4AF37]">
               Inquiries
             </h4>
             <div className="space-y-3.5 text-xs sm:text-sm">
-              <div className="flex items-start space-x-2 text-bakery-clay/85">
-                <MapPin className="w-4 h-4 text-bakery-gold shrink-0 mt-0.5" />
+              <div className="flex items-start space-x-2 text-[#E9DCC9]/85">
+                <MapPin className="w-4 h-4 text-[#D4AF37] shrink-0 mt-0.5" />
                 <span>128 Gourmet Blvd, Culinary District</span>
               </div>
-              <div className="flex items-start space-x-2 text-bakery-clay/85">
-                <Phone className="w-4 h-4 text-bakery-gold shrink-0 mt-0.5" />
+              <div className="flex items-start space-x-2 text-[#E9DCC9]/85">
+                <Phone className="w-4 h-4 text-[#D4AF37] shrink-0 mt-0.5" />
                 <span>{CONTACT_INFO.phone}</span>
               </div>
-              <div className="flex items-start space-x-2 text-bakery-clay/85">
-                <Mail className="w-4 h-4 text-bakery-gold shrink-0 mt-0.5" />
+              <div className="flex items-start space-x-2 text-[#E9DCC9]/85">
+                <Mail className="w-4 h-4 text-[#D4AF37] shrink-0 mt-0.5" />
                 <span className="truncate">{CONTACT_INFO.email}</span>
               </div>
             </div>
@@ -108,10 +108,10 @@ export default function Footer() {
 
           {/* Newsletter Subscription (3 cols) */}
           <div className="md:col-span-3 space-y-6">
-            <h4 className="font-serif text-lg font-bold text-white relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-8 after:h-0.5 after:bg-bakery-gold">
+            <h4 className="font-serif text-lg font-bold text-white relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-8 after:h-0.5 after:bg-[#D4AF37]">
               Newsletter
             </h4>
-            <p className="text-xs text-bakery-clay/80 leading-relaxed font-light">
+            <p className="text-xs text-[#E9DCC9]/80 leading-relaxed font-light">
               Subscribe to receive morning recipe disclosures, secret weekend discounts, and first looks at seasonal cupcake menus.
             </p>
 
@@ -123,11 +123,11 @@ export default function Footer() {
                   placeholder="name@example.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-xs text-white placeholder:text-white/30 focus:outline-none focus:border-bakery-gold transition-colors pr-12"
+                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-xs text-white placeholder:text-white/30 focus:outline-none focus:border-[#D4AF37] transition-colors pr-12"
                 />
                 <button
                   type="submit"
-                  className="absolute right-2 top-1/2 -translate-y-1/2 p-1.5 bg-bakery-gold text-bakery-chocolate hover:bg-white rounded-lg transition-all"
+                  className="absolute right-2 top-1/2 -translate-y-1/2 p-1.5 bg-[#D4AF37] text-[#3E2723] hover:bg-white rounded-lg transition-all"
                   aria-label="Subscribe"
                 >
                   <Mail className="w-4 h-4" />
@@ -146,12 +146,12 @@ export default function Footer() {
         </div>
 
         {/* Lower footer copyright details */}
-        <div className="pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-bakery-clay/55 font-light gap-4">
+        <div className="pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-[#E9DCC9]/55 font-light gap-4">
           <span>© 2026 Chow Box. All Rights Reserved.</span>
           <div className="flex space-x-4">
-            <a href="#privacy" className="hover:text-bakery-gold transition-colors">Privacy Policy</a>
+            <a href="#privacy" className="hover:text-[#D4AF37] transition-colors">Privacy Policy</a>
             <span>•</span>
-            <a href="#terms" className="hover:text-bakery-gold transition-colors">Terms of Service</a>
+            <a href="#terms" className="hover:text-[#D4AF37] transition-colors">Terms of Service</a>
           </div>
         </div>
 
